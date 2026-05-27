@@ -37,18 +37,140 @@ const initialFormState = () => ({
 const newProductData = ref(initialFormState())
 
 const allProducts = ref([
-  { id: 1, title: 'Авторские эклеры', price: 1500, category: 'desserts', images: [eclairsImg], currentImgIndex: 0, badge: 'Спецпредложение', weight: 'набор из 4 шт. / 350 г', desc: 'Тонкое заварное тесто и нежный крем на основе натуральных сливок и бурбонской ванили.' },
-  { id: 2, title: 'Французский мильфей', price: 2500, category: 'desserts', images: [milfierImg], currentImgIndex: 0, badge: 'Фирменный рецепт', weight: 'целый торт / 500 г', desc: 'Классика французской кухни: хрустящее слоеное тесто и легкий сливочный крем "Дипломат".' },
-  { id: 3, title: 'Муссовый торт', price: 3200, category: 'desserts', images: [cakeImg], currentImgIndex: 0, badge: 'Премиум', weight: '1 кг', desc: 'Сочетание нежного ягодного мусса, бархатистой текстуры и тонкого шоколадного биشکвита.' },
-  { id: 4, title: 'Тарталетка с ягодами', price: 650, category: 'desserts', images: [tartImg, tartCutImg], currentImgIndex: 0, weight: '1 шт / 150 г', desc: 'Хрустящая песочная основа, ванильный заварной крем и россыпь отборных сезонных ягод.' },
-  { id: 5, title: 'Пряники ручной работы', price: 350, category: 'bakery', images: [pryanikSetImg, pryanikCircleImg, pryanikHouseImg], currentImgIndex: 0, badge: 'NEW', weight: 'набор / 200 г', desc: 'Медовое тесто с пряностями и авторская ручная роспись сахарной глазурью.' },
-  { id: 6, title: 'Печатный пряник', price: 800, category: 'bakery', images: [pryanikBigImg, pryanikCutImg], currentImgIndex: 0, weight: '1 шт / 400 г', desc: 'Традиционный рецепт с богатым вкусом пряностей и сочной фруктовой начинкой внутри.' },
-  { id: 7, title: 'Торт «Захер»', price: 1200, category: 'desserts', images: [zaherImg, zaherCutImg], currentImgIndex: 0, weight: 'порция / 180 г', desc: 'Австрийская классика: шоколадные бисквиты с абрикосовым конфитюром под темной глазурью.' },
-  { id: 8, title: 'Пирожные Шу (ваниль)', price: 900, category: 'desserts', images: [zyzhikImg, zyzhikcutImg], currentImgIndex: 0, weight: 'набор 3 шт / 180 г', desc: 'Легкие заварные пирожные с хрустящим слоем кракелина и нежным ванильным кремом.' },
-  { id: 9, title: 'Десерт «Ирландская бомба»', price: 550, category: 'desserts', images: [bombaImg], currentImgIndex: 0, badge: 'Шоко-хит', weight: '1 шт / 150 г', desc: 'Насыщенный шоколадный брауни с ноткой ирландского ликера и глубоким вкусом какао.' },
-  { id: 10, title: 'Торт «Черный лес»', price: 1200, category: 'desserts', images: [blackforestImg, blackforestcutImg], currentImgIndex: 0, weight: 'порция / 180 г', desc: 'Классический шоколадный бисквит, пропитанный вишневым соком, со свежими сливками и ягодами.' },
-  { id: 11, title: 'Рождественский штоллен', price: 1800, category: 'bakery', images: [schtollenImg], currentImgIndex: 0, badge: 'Сезонное', weight: '500 г', desc: 'Традиционная выпечка с обилием цукатов, орехов и пряностей, выдержанная в роме.' },
-  { id: 12, title: 'Черный лес Modern', price: 1350, category: 'desserts', images: [blackforestnewImg, blackforestcutnewImg], currentImgIndex: 0, badge: 'Авторский взгляд', weight: 'порция / 180 г', desc: 'Муссовое исполнение: вишневое конфи, нежный шоколадный мусс и зеркальная глазурь.' }
+ { 
+    id: 1, 
+    title: 'Французский «Мильфей»', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [milfierImg], 
+    currentImgIndex: 0,
+    badge: 'Фирменный рецепт',
+    weight: '12*8 см',
+    desc: 'Хрустящие коржи из слоеного теста, сливочный крем «Diplomat»'
+  },
+  { 
+    id: 2, 
+    title: 'Карамельные Макарон', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [macaronImg, macaroncutImg], 
+    currentImgIndex: 0,
+    badge: 'Новинка',
+    weight: 'набор из 5 шт.',
+    desc: 'Выполнен на итальянской меренге, ганаш из карамельного шоколада со сливками, мягкая соленая карамель'
+  },
+  { 
+    id: 3, 
+    title: 'Грушевая «Шарлотт»', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [cakeImg], 
+    currentImgIndex: 0,
+    badge: 'Премиум',
+    weight: 'от 1 кг',
+    desc: 'Бисквит Савоярди, карамелизованные груши, крем «Bavarois»'
+  },
+  { 
+    id: 4, 
+    title: 'Эклеры «New York Cheesecake»', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [eclairsImg, eclairscutImg], 
+    currentImgIndex: 0,
+    badge: 'Спецпредложение',
+    weight: 'набор из 3 шт.',
+    desc: 'Безглютеновое тесто, творожно-сливочный крем, клубничное желе'
+  },
+  { 
+    id: 5, 
+    title: 'Муссовый торт «Sachertorte»', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [zaherImg, zaherCutImg], 
+    currentImgIndex: 0,
+    weight: 'от 1 кг',
+    desc: 'Шоколадный бисквит, прослойка из абрикосового и мандаринового конфитюра в сочетании с «бобами тонка», шоколадный мусс'
+  },
+  { 
+    id: 6, 
+    title: 'Тарталетка с ягодами', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [tartImg, tartCutImg], 
+    currentImgIndex: 0,
+    weight: '1 шт.',
+    desc: 'Песочное тесто, ванильный ганаш, ягодное желе, свежие ягоды'
+  },
+  { 
+    id: 7, 
+    title: 'Имбирные пряники', 
+    price: 'По запросу', 
+    category: 'bakery', 
+    images: [pryanikSetImg, pryanikCircleImg, pryanikHouseImg], 
+    currentImgIndex: 0,
+    weight: '1 шт.',
+    desc: 'Ароматное медовое тесто с имбирем и корицей, ручная художественная роспись сахарной глазурью'
+  },
+  { 
+    id: 8, 
+    title: 'Печатный пряник с начинкой', 
+    price: 'По запросу', 
+    category: 'bakery', 
+    images: [pryanikBigImg, pryanikCutImg], 
+    currentImgIndex: 0,
+    weight: '1 шт.',
+    desc: 'Традиционное медовое тесто с пряностями, густая начинка из протертой домашней смородины и яблок'
+  },
+  { 
+    id: 9, 
+    title: 'Брауни «Irish Stout»', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [bombaImg], 
+    currentImgIndex: 0,
+    weight: 'от 300 г',
+    desc: 'Брауни на пиве Stout с грецким орехом, ванильный ганаш, карамель'  
+  },
+  { 
+    id: 10, 
+    title: 'Ванильные профитроли с шоколадным ганашем', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [zyzhikImg, zyzhikcutImg], 
+    currentImgIndex: 0,
+    weight: 'набор из 5 шт.',
+    desc: 'Сливочный крем с натуральной ванилью и насыщенный шоколадный ганаш'
+  },
+  { 
+    id: 11, 
+    title: 'Классический «Черный лес»', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [blackforestImg, blackforestcutImg], 
+    currentImgIndex: 0,
+    weight: 'от 1 кг',
+    desc: 'Шоколадный бисквит, сливочный и шоколадный ганаш, вишневое желе'
+  },
+  { 
+    id: 12, 
+    title: 'Рождественский штоллен', 
+    price: 'По запросу', 
+    category: 'bakery', 
+    images: [schtollenImg], 
+    currentImgIndex: 0,
+    weight: '500 г',
+    desc: 'Творожное тесто, цукаты на роме Barceló, масло Нуазетт'
+  },
+  { 
+    id: 13, 
+    title: 'Черный лес «Modern»', 
+    price: 'По запросу', 
+    category: 'desserts', 
+    images: [blackforestnewImg, blackforestcutnewImg], 
+    currentImgIndex: 0,
+    weight: 'от 1 кг',
+    desc: 'Шоколадный бисквит, вишневое желе, нежный сливочный мусс'
+  }
 ])
 
 const filteredProducts = computed(() => {
