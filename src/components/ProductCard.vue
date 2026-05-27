@@ -4,7 +4,7 @@
     
     <!--  карточка -->
     <div style="background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 20px; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; width: 100%;">
-      
+         
       <!--  картинка или заглушка слайдера -->
       <div style="height: 220px; width: 100%; position: relative; background-color: #f5f4f0; border-radius: 6px; overflow: hidden; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
         <div v-if="product.badge" style="position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.9); color: #1a1a1a; padding: 3px 8px; border: 1px solid #1a1a1a; font-size: 9px; text-transform: uppercase; font-weight: bold; z-index: 2;">
