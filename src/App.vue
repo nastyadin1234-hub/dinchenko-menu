@@ -119,7 +119,7 @@ const handleDeleteProduct = (id) => {
         <h5 style="margin: 0 0 15px 0; font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 1px;">Панель управления</h5>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 15px;">
           <div style="flex: 1; min-width: 200px;">
-            <label style="font-size: 12px; color: #555; display: block; margin-bottom: 5px;">Размер цены (px):</label>
+            <label style="font-size: 12px; color: #555; display: block; margin-bottom: 5px;">Размер шрифта цены (px):</label>
             <input type="number" v-model.number="fontSize" min="14" max="30" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
           </div>
           <div style="flex: 1; min-width: 200px;">
