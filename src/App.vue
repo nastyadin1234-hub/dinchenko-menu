@@ -37,19 +37,7 @@ const initialFormState = () => ({
 const newProductData = ref(initialFormState())
 
 const allProducts = ref([
- { 
-    id: 1, 
-    title: 'Французский «Мильфей»', 
-    price: 'По запросу', 
-    category: 'desserts', 
-    images: [milfierImg], 
-    currentImgIndex: 0,
-    badge: 'Фирменный рецепт',
-    weight: '12*8 см',
-    desc: 'Хрустящие коржи из слоеного теста, сливочный крем «Diplomat»'
-  },
-  const allProducts = ref([
- { 
+  { 
     id: 1, 
     title: 'Французский «Мильфей»', 
     price: 'По запросу', 
@@ -61,7 +49,7 @@ const allProducts = ref([
     desc: 'Хрустящие коржи из слоеного теста, сливочный крем «Diplomat»'
   },
   { 
-    id: 2, 
+    id: 3, 
     title: 'Грушевая «Шарлотт»', 
     price: 'По запросу', 
     category: 'desserts', 
@@ -72,18 +60,18 @@ const allProducts = ref([
     desc: 'Бисквит Савоярди, карамелизованные груши, крем «Bavarois»'
   },
   { 
-    id: 3, 
+    id: 4, 
     title: 'Эклеры «New York Cheesecake»', 
     price: 'По запросу', 
     category: 'desserts', 
-    images: [eclairsImg], // Удален неимпортированный eclairscutImg
+    images: [eclairsImg], 
     currentImgIndex: 0,
     badge: 'Спецпредложение',
     weight: 'набор из 3 шт.',
     desc: 'Безглютеновое тесто, творожно-сливочный крем, клубничное желе'
   },
   { 
-    id: 4, 
+    id: 5, 
     title: 'Муссовый торт «Sachertorte»', 
     price: 'По запросу', 
     category: 'desserts', 
@@ -93,7 +81,7 @@ const allProducts = ref([
     desc: 'Шоколадный бисквит, прослойка из абрикосового и мандаринового конфитюра в сочетании с «бобами тонка», шоколадный мусс'
   },
   { 
-    id: 5, 
+    id: 6, 
     title: 'Тарталетка с ягодами', 
     price: 'По запросу', 
     category: 'desserts', 
@@ -103,7 +91,7 @@ const allProducts = ref([
     desc: 'Песочное тесто, ванильный ганаш, ягодное желе, свежие ягоды'
   },
   { 
-    id: 6, 
+    id: 7, 
     title: 'Имбирные пряники', 
     price: 'По запросу', 
     category: 'bakery', 
@@ -113,7 +101,7 @@ const allProducts = ref([
     desc: 'Ароматное медовое тесто с имбирем и корицей, ручная художественная роспись сахарной глазурью'
   },
   { 
-    id: 7, 
+    id: 8, 
     title: 'Печатный пряник с начинкой', 
     price: 'По запросу', 
     category: 'bakery', 
@@ -123,7 +111,7 @@ const allProducts = ref([
     desc: 'Традиционное медовое тесто с пряностями, густая начинка из протертой домашней смородины и яблок'
   },
   { 
-    id: 8, 
+    id: 9, 
     title: 'Брауни «Irish Stout»', 
     price: 'По запросу', 
     category: 'desserts', 
@@ -133,7 +121,7 @@ const allProducts = ref([
     desc: 'Брауни на пиве Stout с грецким орехом, ванильный ганаш, карамель'  
   },
   { 
-    id: 9, 
+    id: 10, 
     title: 'Ванильные профитроли с шоколадным ганашем', 
     price: 'По запросу', 
     category: 'desserts', 
@@ -143,7 +131,7 @@ const allProducts = ref([
     desc: 'Сливочный крем с натуральной ванилью и насыщенный шоколадный ганаш'
   },
   { 
-    id: 10, 
+    id: 11, 
     title: 'Классический «Черный лес»', 
     price: 'По запросу', 
     category: 'desserts', 
@@ -153,7 +141,7 @@ const allProducts = ref([
     desc: 'Шоколадный бисквит, сливочный и шоколадный ганаш, вишневое желе'
   },
   { 
-    id: 11, 
+    id: 12, 
     title: 'Рождественский штоллен', 
     price: 'По запросу', 
     category: 'bakery', 
@@ -163,7 +151,7 @@ const allProducts = ref([
     desc: 'Творожное тесто, цукаты на роме Barceló, масло Нуазетт'
   },
   { 
-    id: 12, 
+    id: 13, 
     title: 'Черный лес «Modern»', 
     price: 'По запросу', 
     category: 'desserts', 
@@ -174,7 +162,6 @@ const allProducts = ref([
   }
 ])
 
-])
 
 const filteredProducts = computed(() => {
   return allProducts.value.filter(product => {
